@@ -19,7 +19,7 @@ int deposit(string subor){
 		int i;
 		fstream x (".\\accounts\\" + subor);
 		ofstream temp (".\\accounts\\temp.txt");
-		for (int i = 0; i < 4; i++){
+		for (int i = 0; i < 5; i++){
 			x >> cash;
 			if (i == 3){
 				temp << to_string(stoi(cash) + ciastka) << endl;

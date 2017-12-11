@@ -15,6 +15,7 @@ void help(int i){
 			cout << "3. Vybrat ciastku" << endl;
 			cout << "4. Zobrazit aktivitu na ucte" << endl;
 			cout << "5. Zrusit ucet" << endl;
+			cout << "6. Odhlasit sa" << endl;
 			break;
 	}
 }
