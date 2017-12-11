@@ -40,7 +40,6 @@ void menu0(){
 }
 
 void menu1(string subor){
-	help(1);
 	string vstup;
 	cout << "Cakam na vstup" << endl;
 	cin >> vstup;
@@ -53,7 +52,7 @@ void menu1(string subor){
 				deposit(subor);
 				break;
 			case '3':
-				//vyber();
+				vyber(subor);
 				break;
 			case '4':
 				//aktivita();
