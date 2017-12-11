@@ -11,8 +11,7 @@ int main(){
 	cout << "Vitajte v najviac premakanom bankovom systeme" << endl;
 	cout << "Ak potrebujete pomoc, zadajte 9" << endl;
 	Sleep(2000);	
-	
-	menu(0);
+	menu0();
 	
 }
 
