@@ -4,6 +4,7 @@
 #include "deposit.h"
 #include "login.h"
 #include "vyber.h"
+#include "info.h"
 
 #include <iostream>
 #include <stdlib.h>
@@ -13,6 +14,7 @@
 using namespace std;
 
 void menu0(){
+	help(0);
 	string vstup;
 	cout << "Cakam na vstup" << endl;
 	cin >> vstup;
@@ -40,13 +42,14 @@ void menu0(){
 }
 
 void menu1(string subor){
+	help(1);
 	string vstup;
 	cout << "Cakam na vstup" << endl;
 	cin >> vstup;
 	if (isdigit(vstup[0])){
 		switch (vstup[0]){
 			case '1':
-				//info();
+				info(subor);
 				break;
 			case '2':
 				deposit(subor);
@@ -59,6 +62,10 @@ void menu1(string subor){
 				break;
 			case '5':
 				//vymazat();
+			case '6':
+				system("cls");
+				cout << "Boli ste uspesne odhlaseni." << endl;
+				menu0();
 			case '9':
 				help(1);
 				menu1(subor);
