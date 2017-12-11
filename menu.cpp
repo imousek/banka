@@ -52,10 +52,19 @@ void menu1(){
 	if (isdigit(vstup[0])){
 		switch (vstup[0]){
 			case '0':
-				create_acc();
+				//info();
 				break;
 			case '1':
-				//login();
+				deposit();
+				break;
+			case '2':
+				vyber();
+				break;
+			case '3':
+				aktivita();
+				break;
+			case '4':
+				vymazat();
 				break;
 			case '9':
 				help(1);

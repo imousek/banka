@@ -1,8 +1,7 @@
 // uvodna obrazovka
 /*
 #include <iostream>
-#include <fstream>
-#include <string>
+#include <fstream>#include <string>
 #include <sstream>
 
 using namespace std;
