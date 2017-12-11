@@ -1,6 +1,8 @@
+#include "menu.h"
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <windows.h>
 
 using namespace std;
 
@@ -32,7 +34,9 @@ int deposit(string subor){
 		rename(".\\accounts\\temp.txt", (".\\accounts\\" + subor).c_str());
 		cout << "Uspesne ste vlozili " << ciastka << endl;
 		cout << "Na ucte mate teraz " << to_string(stoi(cash) + ciastka) << endl;
-		return 0;
+		Sleep(2000);
+		system("cls");
+		menu1(subor);
 	}
 }
 

@@ -40,6 +40,7 @@ void menu0(){
 }
 
 void menu1(string subor){
+	help(1);
 	string vstup;
 	cout << "Cakam na vstup" << endl;
 	cin >> vstup;
