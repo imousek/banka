@@ -1,5 +1,5 @@
-#ifndef vyber
-#define vyber
+#ifndef widthraw
+#define widthraw
 
 
 int vyber();

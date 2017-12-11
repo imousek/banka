@@ -1,15 +1,10 @@
 #include "menu.h"
 #include "help.h"
 #include "create_acc.h"
-<<<<<<< HEAD
 #include "deposit.h"
 #include "login.h"
-//#include "vyber.h"
-
-
-=======
 #include "vyber.h"
->>>>>>> origin/experimental
+
 #include <iostream>
 #include <stdlib.h>
 #include <windows.h>
@@ -38,7 +33,7 @@ void menu0(){
 				create_acc();
 				break;
 			case '1':
-				//login();
+				login();
 				break;
 			case '9':
 				help(0);
@@ -55,21 +50,26 @@ void menu0(){
 	}
 }
 
-void menu1(string meno_suboru){
+void menu1(){
 	string vstup;
 	cout << "Cakam na vstup" << endl;
 	cin >> vstup;
 	if (isdigit(vstup[0])){
 		switch (vstup[0]){
 			case '0':
-				create_acc();
+				//info();
 				break;
 			case '1':
-				//login();
+				deposit();
+				break;
+			case '2':
+				//vyber();
 				break;
 			case '3':
-				vyber();
+				//aktivita();
 				break;
+			case '4':
+				//vymazat();
 			case '9':
 				help(1);
 				menu1();
