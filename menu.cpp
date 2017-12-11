@@ -4,9 +4,12 @@
 #include "deposit.h"
 #include "login.h"
 //#include "vyber.h"
+
+
 #include <iostream>
 #include <stdlib.h>
 #include <windows.h>
+#include <string>
 
 using namespace std;
 
