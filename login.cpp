@@ -27,6 +27,7 @@ int login()
 	if (temp==heslo)
 		{
 			cout << "Boli ste uspesne prihlaseny" << endl;
+			x.close();
 			help(1);
 			menu1(meno_suboru);	
 		}

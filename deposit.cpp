@@ -14,15 +14,24 @@ int deposit(string subor){
 	}
 	else {
 		string cash;
-		ifstream x (".\\accounts\\" + subor);
-		for (int i = 1; i <= 4; i++){
-			getline(x,cash);
+		int i;
+		fstream x (".\\accounts\\" + subor);
+		ofstream temp (".\\accounts\\temp.txt");
+		for (int i = 0; i < 4; i++){
+			x >> cash;
+			if (i == 3){
+				temp << to_string(stoi(cash) + ciastka) << endl;
+			}
+			else{
+				temp << cash << endl;
+			}
 		}
-		//line.replace(line.find(deleteline),deleteline.length(),"");
-		//x.seekp(x.tellg());
-		//x.replace(cash, to_string(stoi(cash) + ciastka))
-		//cash = to_string(stoi(cash) + ciastka);
-		//x << cash << endl;
+		x.close();
+		temp.close();
+		remove((".\\accounts\\" + subor).c_str());
+		rename(".\\accounts\\temp.txt", (".\\accounts\\" + subor).c_str());
+		cout << "Uspesne ste vlozili " << ciastka << endl;
+		cout << "Na ucte mate teraz " << to_string(stoi(cash) + ciastka) << endl;
 		return 0;
 	}
 }

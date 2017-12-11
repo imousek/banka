@@ -1,4 +1,4 @@
 test
 test
 heslo
-0
+500
