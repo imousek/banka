@@ -1,7 +1,15 @@
 #include "menu.h"
 #include "help.h"
 #include "create_acc.h"
+<<<<<<< HEAD
+#include "deposit.h"
+#include "login.h"
+//#include "vyber.h"
+
+
+=======
 #include "vyber.h"
+>>>>>>> origin/experimental
 #include <iostream>
 #include <stdlib.h>
 #include <windows.h>

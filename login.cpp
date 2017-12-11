@@ -3,6 +3,8 @@
 #include <string>
 #include "login.h"
 #include "menu.h"
+#include "help.h"
+
 using namespace std;
 int login()
 {
@@ -15,7 +17,7 @@ int login()
 	system("CLS");
 	string meno_suboru=string("ucet_") + priezvisko + meno[0] +string(".txt");
 	ifstream x;
-	x.open(meno_suboru.c_str());
+	x.open(".\\accounts\\" + meno_suboru);
 	for (int i=1;i<4;i++)
 		getline(x,heslo);
 	system("CLS");
@@ -24,6 +26,8 @@ int login()
 	system("CLS");
 	if (temp==heslo)
 		{
+			cout << "Boli ste uspesne prihlaseny" << endl;
+			help(1);
 			menu(1);	
 		}
 	else
