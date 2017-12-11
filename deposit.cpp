@@ -19,7 +19,7 @@ int deposit(){
 		for (int i = 1; i <= 4; i++){
 			getline(x,cash);
 		}
-		line.replace(line.find(deleteline),deleteline.length(),"");
+		//line.replace(line.find(deleteline),deleteline.length(),"");
 		x.seekp(x.tellg());
 		cash = to_string(stoi(cash) + ciastka);
 		x << cash << endl;
