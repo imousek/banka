@@ -9,6 +9,7 @@ using namespace std;
 int login()
 {
 	string meno, priezvisko,heslo,temp,opak;
+	system("CLS");
 	cout << "Zadaj meno" << endl;
 	cin >> meno;
 	system("CLS");
@@ -28,6 +29,7 @@ int login()
 		{
 			cout << "Boli ste uspesne prihlaseny" << endl;
 			x.close();
+			help(1);
 			menu1(meno_suboru);	
 		}
 	else

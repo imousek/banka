@@ -2,6 +2,6 @@
 #define widthraw
 
 
-int vyber();
+int vyber(std::string);
 
 #endif
