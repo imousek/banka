@@ -5,9 +5,7 @@
 #include <fstream>
 #include <string>
 
-/* mal som pravdu stacilo ciny zmenit xd
-	mohol by si spravit to, ze ked bude clovek zadavat heslo tak mu bude hadzat hviezdicky ved vies
-	*/
+// heslo ako hviezdicky
 
 using namespace std;
 
@@ -31,7 +29,7 @@ void create_acc()
 	cout << "Zadaj priezvisko" << endl;
 	cin >> priezvisko;
 	string heslo = nove_heslo();
-	string meno_suboru= "C:/Dev-Cpp/programy/robo/banka/accounts/" + string("ucet_") + priezvisko + meno[0] +string(".txt");
+	string meno_suboru= ".\\accounts\\" + string("ucet_") + priezvisko + meno[0] +string(".txt");
 	system("CLS");
 	ofstream x (meno_suboru.c_str());	
 	x << meno << endl;

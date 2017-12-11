@@ -1,6 +1,9 @@
 #include "menu.h"
 #include "help.h"
 #include "create_acc.h"
+#include "deposit.h"
+#include "login.h"
+//#include "vyber.h"
 #include <iostream>
 #include <stdlib.h>
 #include <windows.h>
@@ -28,7 +31,7 @@ void menu0(){
 				create_acc();
 				break;
 			case '1':
-				//login();
+				login();
 				break;
 			case '9':
 				help(0);
@@ -58,13 +61,13 @@ void menu1(){
 				deposit();
 				break;
 			case '2':
-				vyber();
+				//vyber();
 				break;
 			case '3':
-				aktivita();
+				//aktivita();
 				break;
 			case '4':
-				vymazat();
+				//vymazat();
 				break;
 			case '9':
 				help(1);

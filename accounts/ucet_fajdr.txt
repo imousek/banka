@@ -1,5 +1,4 @@
 robo
 fajd
-abcd
+123
 0
-25

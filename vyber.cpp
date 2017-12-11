@@ -4,7 +4,7 @@
 using namespace std;
 
 /*menu_suboru.c_str() zatial nefunguje, treba vymysliet ako pouzit premennu z login.cpp*/
-
+/*
 int vyber()
 {
 	int suma,suma_ucet;
@@ -23,4 +23,4 @@ int vyber()
 		}
 	else
 		
-}
+}*/
