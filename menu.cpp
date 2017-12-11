@@ -1,31 +1,16 @@
 #include "menu.h"
 #include "help.h"
 #include "create_acc.h"
-<<<<<<< HEAD
-#include "vyber.h"
-=======
 #include "deposit.h"
 #include "login.h"
 #include "vyber.h"
 
->>>>>>> 180533ad49ec7a37412bda1ce559e66c6c136486
 #include <iostream>
 #include <stdlib.h>
 #include <windows.h>
 #include <string>
 
 using namespace std;
-
-void menu(int cislo_menu){
-	switch (cislo_menu){
-		case 0:
-			menu0();
-			break;
-		case 1:
-			menu1();
-			break;
-	}
-}
 
 void menu0(){
 	string vstup;
@@ -54,35 +39,35 @@ void menu0(){
 	}
 }
 
-void menu1(){
+void menu1(string subor){
 	string vstup;
 	cout << "Cakam na vstup" << endl;
 	cin >> vstup;
 	if (isdigit(vstup[0])){
 		switch (vstup[0]){
-			case '0':
+			case '1':
 				//info();
 				break;
-			case '1':
-				deposit();
-				break;
 			case '2':
-				//vyber();
+				deposit(subor);
 				break;
 			case '3':
-				//aktivita();
+				//vyber();
 				break;
 			case '4':
+				//aktivita();
+				break;
+			case '5':
 				//vymazat();
 			case '9':
 				help(1);
-				menu1();
+				menu1(subor);
 				break;
 		}
 	}
 	else {
 		cout << "Nepovoleny vstup" << endl;
 		vstup.clear();
-		menu1();
+		menu1(subor);
 	}
 }

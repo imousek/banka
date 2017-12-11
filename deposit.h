@@ -1,6 +1,6 @@
 #ifndef vklad
 #define vklad
 
-int deposit();
+int deposit(std::string);
 
 #endif

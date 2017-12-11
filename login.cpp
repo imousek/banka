@@ -28,7 +28,7 @@ int login()
 		{
 			cout << "Boli ste uspesne prihlaseny" << endl;
 			help(1);
-			menu(1);	
+			menu1(meno_suboru);	
 		}
 	else
 		{
@@ -37,6 +37,6 @@ int login()
 			if (opak == "ano")
 				goto zadaj_heslo;
 			else
-				menu(0);
+				menu0();
 		}
 }

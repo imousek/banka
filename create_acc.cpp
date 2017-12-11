@@ -40,5 +40,5 @@ void create_acc()
 	cout << "Ucet bol uspesne vytvoreny, prihlasovacie udaje boli zaslane na mail." << endl;
 	Sleep(3000);
 	system("CLS");
-	menu(0);
+	menu0();
 }
