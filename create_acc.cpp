@@ -1,12 +1,10 @@
 #include "create_acc.h"
+#include "time.h"
 #include "menu.h"
 #include <windows.h>
 #include <iostream>
 #include <fstream>
 #include <string>
-
-#include <chrono>
-#include <ctime>
 
 // heslo ako hviezdicky
 
@@ -39,10 +37,7 @@ void create_acc()
 	x << priezvisko << endl;
 	x << heslo << endl;
 	x << 0 << endl;
-	chrono::system_clock::time_point today = chrono::system_clock::now();
-	time_t tt;
-	tt = chrono::system_clock::to_time_t ( today );
-	x << ctime(&tt) << endl;	
+	x << current_time() << endl;	
 	x.close();
 	cout << "Ucet bol uspesne vytvoreny, prihlasovacie udaje boli zaslane na mail." << endl;
 	Sleep(3000);
