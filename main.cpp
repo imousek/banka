@@ -1,18 +1,13 @@
 #include <iostream>
 #include <windows.h>
 #include "menu.h"
-#include "deposit.h"
-
 
 using namespace std;
 
 int main(){
-	int i = 0; // na help
 	cout << "Vitajte v najviac premakanom bankovom systeme" << endl;
 	cout << "Ak potrebujete pomoc, zadajte 9" << endl;
 	Sleep(2000);	
-	menu0();
-	
 }
 
 /* TODO

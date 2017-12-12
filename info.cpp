@@ -5,6 +5,7 @@
 using namespace std;
 
 void info(string subor){
+	system("cls");
 	string udaje;
 	fstream x (".\\accounts\\" + subor);
 	getline(x, udaje);
@@ -18,5 +19,6 @@ void info(string subor){
 	getline(x, udaje);
 	cout << "Ucet od: " << udaje << endl;
 	cout << endl;
+	x.close();
 	menu1(subor);
 }

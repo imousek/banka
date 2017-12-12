@@ -5,9 +5,9 @@
 #include "login.h"
 #include "vyber.h"
 #include "info.h"
+#include "aktivita.h"
 
 #include <iostream>
-#include <stdlib.h>
 #include <windows.h>
 #include <string>
 
@@ -58,7 +58,7 @@ void menu1(string subor){
 				vyber(subor);
 				break;
 			case '4':
-				//aktivita();
+				last_activity(subor);
 				break;
 			case '5':
 				//vymazat();
