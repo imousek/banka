@@ -35,6 +35,7 @@ void create_acc()
 		{
 			cout << "Ucet uz existuje" << endl;
 			Sleep(2000);
+			system("cls");
 			create_acc();
 		}
 	system("CLS");

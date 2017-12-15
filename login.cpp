@@ -8,9 +8,12 @@
 #include "isfileexist.h"
 
 using namespace std;
+
+string temp;
+
 int login()
 {
-	string meno, priezvisko,heslo,temp,opak;
+	string meno, priezvisko,heslo,opak;
 	system("CLS");
 	cout << "Zadaj meno" << endl;
 	cin >> meno;

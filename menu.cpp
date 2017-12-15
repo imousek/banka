@@ -6,6 +6,7 @@
 #include "vyber.h"
 #include "info.h"
 #include "aktivita.h"
+#include "delete_acc.h"
 
 #include <iostream>
 #include <windows.h>
@@ -65,7 +66,8 @@ void menu1(string subor){
 				last_activity(subor);
 				break;
 			case '5':
-				//vymazat();
+				delete_acc(subor);
+				break;
 			case '6':
 				system("cls");
 				cout << "Boli ste uspesne odhlaseni." << endl;

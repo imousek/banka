@@ -28,8 +28,8 @@ Folders=
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
-CompilerSettings=0000000000000000000000000
-UnitCount=23
+CompilerSettings=0000000000000000100000000
+UnitCount=25
 
 [VersionInfo]
 Major=1
@@ -272,6 +272,26 @@ BuildCmd=
 
 [Unit23]
 FileName=isfileexist.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit24]
+FileName=delete_acc.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit25]
+FileName=delete_acc.cpp
 CompileCpp=1
 Folder=
 Compile=1
