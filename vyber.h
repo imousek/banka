@@ -2,6 +2,7 @@
 #define widthraw
 
 
-int vyber(std::string);
+void vyber(std::string);
+void final_vyber(int ciastka, std::string subor, int type);
 
 #endif

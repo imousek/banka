@@ -7,6 +7,7 @@
 #include "info.h"
 #include "aktivita.h"
 #include "delete_acc.h"
+#include "transfer.h"
 
 #include <iostream>
 #include <windows.h>
@@ -69,6 +70,9 @@ void menu1(string subor){
 				delete_acc(subor);
 				break;
 			case '6':
+				transfer(subor);
+				break;
+			case '7':
 				system("cls");
 				cout << "Boli ste uspesne odhlaseni." << endl;
 				menu0();

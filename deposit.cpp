@@ -8,9 +8,44 @@
 
 using namespace std;
 
-int deposit(string subor){
+int ciastka, now;
+
+void final_deposit(int ciastka, string subor, int type){
+	string cash;
+	fstream x (".\\accounts\\" + subor);
+	ofstream temp (".\\accounts\\temp.txt", ios::app);
+	for (int i = 0; i < lines(subor)+1; i++){
+		if (i == 5){
+			switch (type){
+				case 0:
+					temp << "Vklad: " << ciastka << " " << current_time();
+					break;
+				case 1:
+					temp << "Prevod sem: " << ciastka << " " << current_time();
+					break;
+			}
+		}
+		else {
+			getline(x, cash);
+			if (i == 3){
+				now = stoi(cash) + ciastka;
+				temp << to_string(now) << endl;
+			}
+			else{
+				temp << cash << endl;
+			}
+		}
+	
+	}
+	x.close();
+	temp.close();
+	remove((".\\accounts\\" + subor).c_str());
+	rename(".\\accounts\\temp.txt", (".\\accounts\\" + subor).c_str());
+}
+
+void deposit(string subor){
+	int type = 0;
 	system("cls");
-	int ciastka;
 	cout << "Zadajte ciastku. Najmensia hodnota je 10e!" << endl;
 	cin >> ciastka;
 	if (ciastka < 10){
@@ -18,30 +53,7 @@ int deposit(string subor){
 		deposit(subor);
 	}
 	else {
-		string cash;
-		int i, now;
-		fstream x (".\\accounts\\" + subor);
-		ofstream temp (".\\accounts\\temp.txt", ios::app);
-		for (int i = 0; i < lines(subor)+1; i++){
-			if (i == 5){
-				temp << "Vklad: " << ciastka << " " << current_time();
-			}
-			else {
-				getline(x, cash);
-				if (i == 3){
-					now = stoi(cash) + ciastka;
-					temp << to_string(now) << endl;
-				}
-				else{
-					temp << cash << endl;
-				}
-			}
-		
-		}
-		x.close();
-		temp.close();
-		remove((".\\accounts\\" + subor).c_str());
-		rename(".\\accounts\\temp.txt", (".\\accounts\\" + subor).c_str());
+		final_deposit(ciastka, subor, type);
 		cout << "Uspesne ste vlozili " << ciastka << endl;
 		cout << "Na ucte mate teraz " << now << endl;
 		Sleep(2000);
@@ -49,4 +61,5 @@ int deposit(string subor){
 		menu1(subor);
 	}
 }
+
 

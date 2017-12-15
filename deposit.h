@@ -1,6 +1,9 @@
 #ifndef vklad
 #define vklad
 
-int deposit(std::string subor);
+extern int ciastka, now;
+
+void deposit(std::string subor);
+void final_deposit(int ciastka, std::string subor, int type);
 
 #endif
