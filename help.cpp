@@ -8,6 +8,7 @@ void help(int i){
 		case 0:
 			cout << "0. Vytvorit ucet" << endl;
 			cout << "1. Prihlasit sa do existujuceho uctu" << endl;
+			cout << "8. Exit" << endl;
 			break;
 		case 1:
 			cout << "1. Zobrazit informacie o ucte" << endl;
@@ -17,6 +18,7 @@ void help(int i){
 			cout << "5. Zrusit ucet" << endl;
 			cout << "6. Prevod na iny ucet" << endl;
 			cout << "7. Odhlasit sa" << endl;
+			cout << "8. Exit" << endl;
 			break;
 	}
 }

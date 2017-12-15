@@ -28,6 +28,11 @@ void menu0(){
 			case '1':
 				login();
 				break;
+			case '8':
+				system("cls");
+				cout << "Bye bye" << endl;
+				exit(0);
+				break;
 			case '9':
 				help(0);
 				menu0();
@@ -76,6 +81,11 @@ void menu1(string subor){
 				system("cls");
 				cout << "Boli ste uspesne odhlaseni." << endl;
 				menu0();
+			case '8':
+				system("cls");
+				cout << "Bye bye" << endl;
+				exit(0);
+				break;
 			case '9':
 				help(1);
 				menu1(subor);
