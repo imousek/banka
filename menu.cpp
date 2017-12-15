@@ -30,6 +30,10 @@ void menu0(){
 				help(0);
 				menu0();
 				break;
+			default:
+				cout << "Nespravny vstup" << endl;
+				menu0();
+				
 		}
 	}
 	else {

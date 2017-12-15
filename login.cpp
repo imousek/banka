@@ -1,9 +1,11 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <windows.h>
 #include "login.h"
 #include "menu.h"
 #include "help.h"
+#include "isfileexist.h"
 
 using namespace std;
 int login()
@@ -17,8 +19,13 @@ int login()
 	cin >> priezvisko;
 	system("CLS");
 	string meno_suboru=string("ucet_") + priezvisko + meno[0] +string(".txt");
-	ifstream x;
-	x.open(".\\accounts\\" + meno_suboru);
+	if(!is_file_exist(meno_suboru))
+		{
+			cout << "Ucet neexistuje" << endl;
+			Sleep(2000);
+			login();
+		}
+	ifstream x((".\\accounts\\" + meno_suboru).c_str());
 	for (int i=1;i<4;i++)
 		getline(x,heslo);
 	system("CLS");

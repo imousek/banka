@@ -1,6 +1,7 @@
 #include "create_acc.h"
 #include "time.h"
 #include "menu.h"
+#include "isfileexist.h"
 #include <windows.h>
 #include <iostream>
 #include <fstream>
@@ -29,10 +30,17 @@ void create_acc()
 	cin >> meno;
 	cout << "Zadaj priezvisko" << endl;
 	cin >> priezvisko;
-	string heslo = nove_heslo();
-	string meno_suboru= ".\\accounts\\" + string("ucet_") + priezvisko + meno[0] +string(".txt");
+	string meno_suboru= string("ucet_") + priezvisko + meno[0] +string(".txt");
+	if(is_file_exist(meno_suboru))
+		{
+			cout << "Ucet uz existuje" << endl;
+			Sleep(2000);
+			create_acc();
+		}
 	system("CLS");
-	ofstream x (meno_suboru.c_str());	
+	string heslo = nove_heslo();
+	system("CLS");
+	ofstream x ((".\\accounts\\" + meno_suboru).c_str());	
 	x << meno << endl;
 	x << priezvisko << endl;
 	x << heslo << endl;
