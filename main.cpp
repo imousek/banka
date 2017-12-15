@@ -11,11 +11,7 @@ int main(){
 
 /* TODO
 
-
-NOVE:
-x. transfer z jedneho uctu do druheho
-y. pozicka
-
+pozicka
 
 GRAFICKE ROZHRANIE
 

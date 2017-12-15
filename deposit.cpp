@@ -44,7 +44,6 @@ void final_deposit(int ciastka, string subor, int type){
 }
 
 void deposit(string subor){
-	int type = 0;
 	system("cls");
 	cout << "Zadajte ciastku. Najmensia hodnota je 10e!" << endl;
 	cin >> ciastka;
@@ -53,7 +52,7 @@ void deposit(string subor){
 		deposit(subor);
 	}
 	else {
-		final_deposit(ciastka, subor, type);
+		final_deposit(ciastka, subor, 0);
 		cout << "Uspesne ste vlozili " << ciastka << endl;
 		cout << "Na ucte mate teraz " << now << endl;
 		Sleep(2000);

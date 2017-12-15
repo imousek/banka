@@ -53,8 +53,7 @@ void vyber(string subor)
 		vyber(subor);
 	}
 	else {
-		int type = 0;
-		final_vyber(ciastka, subor, type);
+		final_vyber(ciastka, subor, 0);
 		cout << "Uspesne ste vybrali " << ciastka << endl;
 		cout << "Na ucte mate teraz " << now << endl;
 		Sleep(2000);
