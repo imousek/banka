@@ -11,6 +11,7 @@ using namespace std;
 
 string temp;
 
+
 int login()
 {
 	string meno, priezvisko,heslo,opak;

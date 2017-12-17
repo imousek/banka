@@ -10,6 +10,7 @@ using namespace std;
 static bool first = true;
 
 void last_activity(string subor){
+	ChangeCursorStatus(false);
 	do {
 		for (; first; first = false){
 			system("cls");

@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o help.o create_acc.o menu.o deposit.o login.o vyber.o info.o time.o lines_in_file.o aktivita.o isfileexist.o delete_acc.o transfer.o
-LINKOBJ  = main.o help.o create_acc.o menu.o deposit.o login.o vyber.o info.o time.o lines_in_file.o aktivita.o isfileexist.o delete_acc.o transfer.o
+OBJ      = main.o help.o create_acc.o menu.o deposit.o login.o vyber.o info.o time.o lines_in_file.o aktivita.o isfileexist.o delete_acc.o transfer.o gotoxy.o kurzor.o
+LINKOBJ  = main.o help.o create_acc.o menu.o deposit.o login.o vyber.o info.o time.o lines_in_file.o aktivita.o isfileexist.o delete_acc.o transfer.o gotoxy.o kurzor.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -pg
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -65,3 +65,9 @@ delete_acc.o: delete_acc.cpp
 
 transfer.o: transfer.cpp
 	$(CPP) -c transfer.cpp -o transfer.o $(CXXFLAGS)
+
+gotoxy.o: gotoxy.cpp
+	$(CPP) -c gotoxy.cpp -o gotoxy.o $(CXXFLAGS)
+
+kurzor.o: kurzor.cpp
+	$(CPP) -c kurzor.cpp -o kurzor.o $(CXXFLAGS)

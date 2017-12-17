@@ -8,6 +8,7 @@ using namespace std;
 static bool first = true;
 
 void info(string subor){
+	ChangeCursorStatus(false);
 	do {
 		for (; first; first = false){
 			system("cls");

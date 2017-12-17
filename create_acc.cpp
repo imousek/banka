@@ -2,6 +2,7 @@
 #include "time.h"
 #include "menu.h"
 #include "isfileexist.h"
+
 #include <windows.h>
 #include <iostream>
 #include <fstream>
@@ -23,8 +24,10 @@ string nove_heslo()
 	return heslo;
 }
 
+
 void create_acc()
 {
+	system("cls");
 	string meno,priezvisko;
 	cout << "Zadaj meno" << endl;
 	cin >> meno;
@@ -35,7 +38,6 @@ void create_acc()
 		{
 			cout << "Ucet uz existuje" << endl;
 			Sleep(2000);
-			system("cls");
 			create_acc();
 		}
 	system("CLS");
